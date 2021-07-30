@@ -1,0 +1,10 @@
+elasticjob:
+  regCenter:
+    serverLists: 192.168.56.201:2181
+    namespace: elasticjob-lite-springboot
+  jobs:
+    dataflowJob:
+      elasticJobClass: com.github.cvw643.elasticjob.DemoApplication.MyJob
+      cron: 0/5 * * * * ?
+      shardingTotalCount: 3
+      shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
